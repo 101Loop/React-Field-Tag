@@ -1,23 +1,8 @@
 import * as React from 'react'
+import ReactFieldTagProps from './interfaces/reactFieldTagProps';
 import styles from './styles.module.css';
 
-interface StyleClasses {
-  root?: string,
-  input?: string,
-  tags?: string,
-  tag?: string,
-}
-
-interface Props {
-  tags: Array<string>,
-  delimiter?: string,
-  classes?: StyleClasses,
-  closeIcon?: React.ReactElement,
-  onAdd: (arg: string) => void,
-  onDelete: (arg: number) => void,
-}
-
-const ReactFieldTag = ({ tags, delimiter = ',', onAdd, onDelete, closeIcon, classes }: Props) => {
+const ReactFieldTag = ({ tags, delimiter = ',', onAdd, onDelete, closeIcon, classes }: ReactFieldTagProps) => {
   const [val, setVal] = React.useState('');
 
   const changeHandler = (e: any) => {
