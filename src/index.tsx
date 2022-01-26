@@ -1,14 +1,23 @@
 import * as React from 'react'
 import styles from './styles.module.css';
 
+interface StyleClasses {
+  root?: string,
+  input?: string,
+  tags?: string,
+  tag?: string,
+}
+
 interface Props {
   tags: Array<string>,
   delimiter?: string,
+  classes?: StyleClasses,
+  closeIcon?: React.ReactElement,
   onAdd: (arg: string) => void,
   onDelete: (arg: number) => void,
 }
 
-const ReactFieldTag = ({ tags, delimiter = ',', onAdd, onDelete }: Props) => {
+const ReactFieldTag = ({ tags, delimiter = ',', onAdd, onDelete, closeIcon, classes }: Props) => {
   const [val, setVal] = React.useState('');
 
   const changeHandler = (e: any) => {
@@ -37,20 +46,18 @@ const ReactFieldTag = ({ tags, delimiter = ',', onAdd, onDelete }: Props) => {
     }
   }
 
-  console.log({ tags });
-
   return (
-    <div className={styles.container}>
-      <input value={val} onChange={changeHandler} />
-      <div className={styles.tags}>
+    <div className={classes?.root ?? styles.container}>
+      <input className={styles.input} value={val} onChange={changeHandler} />
+      <div className={classes?.tags ?? styles.tags}>
         {tags.map((tag, index) => {
           return (
-            <span className={styles.tag} key={tag}>
+            <span className={classes?.tag ?? styles.tag} key={tag}>
               {tag}
               <button onClick={() => {
                 onDelete(index);
               }}>
-                <img height={10} src="https://img.icons8.com/ios/50/000000/delete-sign--v1.png" />
+                {closeIcon ?? <img height={10} src="https://img.icons8.com/ios/50/000000/delete-sign--v1.png" />}
               </button>
             </span>
           );
