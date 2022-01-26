@@ -23,6 +23,12 @@ const ReactFieldTag = ({ tags, delimiter = ',', onAdd, onDelete, closeIcon, clas
         return;
       }
       onAdd(first);
+
+      if (arr.length > 1) {
+        setVal(arr[1]);
+      } else {
+        setVal('');
+      }
     } else {
       setVal(value);
     }

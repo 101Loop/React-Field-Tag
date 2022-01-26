@@ -6,8 +6,10 @@
     "plugin:prettier/recommended",
     "prettier/standard",
     "prettier/react",
-    "plugin:@typescript-eslint/eslint-recommended"
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:ft-flow/recommended"
   ],
+  "plugins": ["jest"],
   "env": {
     "node": true
   },
@@ -21,6 +23,9 @@
   "settings": {
     "react": {
       "version": "16"
+    },
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": true
     }
   },
   "rules": {
