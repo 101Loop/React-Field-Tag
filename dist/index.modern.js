@@ -20,6 +20,9 @@ const ReactFieldTag = ({
       if (!first) {
         setVal('');
         return;
+      } else if (tags.includes(first)) {
+        setVal(first);
+        return;
       }
 
       onAdd(first);
