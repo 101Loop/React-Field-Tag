@@ -3,7 +3,7 @@ import StyleClasses from "./styleClasses";
 
 /**
  * @typedef {Object} ReactFieldTagProps
- * @property {Array<string>} tags - an array of tags, formed out of input text, or user-defined
+ * @property {Array<string>} tags - an array of tags
  * @property {string} delimiter - an optional string, to determine a point at which the string separates into tags
  * @property {StyleClasses} classes - an optional style classes for styling
  * @property {ReactElement} closeIcon - an optional element to be used as close icon
