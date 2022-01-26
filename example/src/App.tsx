@@ -1,7 +1,7 @@
 import React from 'react'
 
 import ReactFieldTag from 'react-field-tag'
-import 'react-field-tag/dist/index.css'
+// import 'react-field-tag/dist/index.css'
 
 const App = () => {
   const [tags, setTags] = React.useState<Array<string>>([]);

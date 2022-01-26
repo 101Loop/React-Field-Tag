@@ -8,24 +8,21 @@ const ReactFieldTag = ({ tags, delimiter = ',', onAdd, onDelete, closeIcon, clas
   const changeHandler = (e: any) => {
     const value = e.target.value;
 
+    /// enters only if the value includes delimiter, and must have at least 2 characters
     if (value.length > 1 && value.includes(delimiter)) {
       const arr = value.split(delimiter);
 
+      /// first item after splitting
       const first = arr[0];
-      if (!first) {
+
+      if (!first) { /// if it's empty ignore it
         setVal('');
         return;
-      } else if (tags.includes(first)) {
+      } else if (tags.includes(first)) { /// if the tag is already there, ignore it
         setVal(first);
         return;
       }
       onAdd(first);
-
-      if (arr.length > 1) {
-        setVal(arr[1]);
-      } else {
-        setVal('');
-      }
     } else {
       setVal(value);
     }
