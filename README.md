@@ -65,7 +65,7 @@ ___
 
 | Name | Type | Description | Default |
 | :------ | :------ | :------ | :------ |
-| `tags` | Array<string> | an array of tags, formed out of input text, or user-defined | - |
+| `tags` | Array of string | an array of tags, formed out of input text, or user-defined | - |
 | `delimiter?` | string | determines a point at which the string separates into tags | `,` |
 | `classes?` | [StyleClasses](#StyleClasses) | style classes for styling | - |
 | `closeIcon?` | ReactElement | element to be used as close icon | `x` (close icon from icons8) |
