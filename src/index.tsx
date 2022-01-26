@@ -5,7 +5,7 @@ interface Props {
   tags: Array<string>,
   delimiter?: string,
   onAdd: (arg: string) => void,
-  onDelete?: (arg: number) => void,
+  onDelete: (arg: number) => void,
 }
 
 const ReactFieldTag = ({ tags, delimiter = ',', onAdd, onDelete }: Props) => {
@@ -40,11 +40,13 @@ const ReactFieldTag = ({ tags, delimiter = ',', onAdd, onDelete }: Props) => {
     <div className={styles.container}>
       <input value={val} onChange={changeHandler} />
       <div className={styles.tags}>
-        {tags.map((tag) => {
+        {tags.map((tag, index) => {
           return (
             <span className={styles.tag} key={tag}>
               {tag}
-              <button>
+              <button onClick={() => {
+                onDelete(index);
+              }}>
                 <img height={10} src="https://img.icons8.com/ios/50/000000/delete-sign--v1.png" />
               </button>
             </span>

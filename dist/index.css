@@ -1,19 +1,19 @@
-._1Lxpd {
+._styles-module__container__1Lxpd {
   display: flex;
   flex-direction: column;
 }
 
-._1Lxpd {
+._styles-module__container__1Lxpd {
   max-width: 350px;
 }
 
-._33Uz_ {
+._styles-module__tags__33Uz_ {
   display: flex;
   max-width: 350px;
   overflow: auto;
 }
 
-._kR9pS {
+._styles-module__tag__kR9pS {
   display: flex;
   align-items: center;
   background-color: #EEEEEE;
@@ -26,7 +26,7 @@
   border-radius: 12px;
 }
 
-._kR9pS > button {
+._styles-module__tag__kR9pS > button {
   display: flex;
   align-items: center
   ;

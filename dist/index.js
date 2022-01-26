@@ -1,6 +1,6 @@
 var React = require('react');
 
-var styles = {"container":"_1Lxpd","tags":"_33Uz_","tag":"_kR9pS"};
+var styles = {"container":"_styles-module__container__1Lxpd","tags":"_styles-module__tags__33Uz_","tag":"_styles-module__tag__kR9pS"};
 
 var ReactFieldTag = function ReactFieldTag(_ref) {
   var tags = _ref.tags,
@@ -8,7 +8,6 @@ var ReactFieldTag = function ReactFieldTag(_ref) {
       delimiter = _ref$delimiter === void 0 ? ',' : _ref$delimiter,
       onAdd = _ref.onAdd,
       onDelete = _ref.onDelete;
-  console.log(onDelete);
 
   var _React$useState = React.useState(''),
       val = _React$useState[0],
@@ -48,11 +47,15 @@ var ReactFieldTag = function ReactFieldTag(_ref) {
     onChange: changeHandler
   }), React.createElement("div", {
     className: styles.tags
-  }, tags.map(function (tag) {
+  }, tags.map(function (tag, index) {
     return React.createElement("span", {
       className: styles.tag,
       key: tag
-    }, tag, React.createElement("button", null, React.createElement("img", {
+    }, tag, React.createElement("button", {
+      onClick: function onClick() {
+        onDelete(index);
+      }
+    }, React.createElement("img", {
       height: 10,
       src: "https://img.icons8.com/ios/50/000000/delete-sign--v1.png"
     })));

@@ -10,7 +10,11 @@ const App = () => {
     setTags([...tags, tag]);
   }
 
-  return <ReactFieldTag tags={tags} onAdd={onAdd} delimiter=':' />
+  const onDelete = (index: number) => {
+    setTags(tags.filter((_, i) => i !== index));
+  }
+
+  return <ReactFieldTag tags={tags} onAdd={onAdd} onDelete={onDelete} />
 }
 
 export default App
