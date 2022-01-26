@@ -5,6 +5,13 @@
   "author": "iamdipanshusingh",
   "license": "MIT",
   "repository": "iamdipanshusingh/React-Field-Tag",
+  "keywords": [
+    "tags",
+    "tag-input",
+    "tag-field",
+    "react-field-tag",
+    "react-input-tag"
+  ],
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.tsx",
@@ -27,6 +34,7 @@
     "react": "^16.0.0"
   },
   "devDependencies": {
+    "@babel/eslint-parser": "^7.16.5",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
@@ -34,16 +42,18 @@
     "@types/node": "^12.12.38",
     "@types/react": "^16.9.27",
     "@types/react-dom": "^16.9.7",
-    "@typescript-eslint/eslint-plugin": "^2.26.0",
-    "@typescript-eslint/parser": "^2.26.0",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
     "babel-eslint": "^10.0.3",
     "cross-env": "^7.0.2",
-    "eslint": "^6.8.0",
+    "eslint": "^8.7.0",
     "eslint-config-prettier": "^6.7.0",
     "eslint-config-standard": "^14.1.0",
     "eslint-config-standard-react": "^9.2.0",
     "eslint-loader": "^4.0.2",
+    "eslint-plugin-ft-flow": "^2.0.1",
     "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^26.0.0",
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-promise": "^4.2.1",
@@ -58,10 +68,17 @@
     "react-error-overlay": "^6.0.9",
     "typescript": "^3.9.10"
   },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
   "files": [
     "dist"
   ],
   "dependencies": {
+    "eslint-plugin-flowtype": "^5.10.0",
     "postcss": "^8.4.5",
     "react-scripts": "^5.0.0"
   }
