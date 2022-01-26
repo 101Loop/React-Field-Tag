@@ -1,4 +1,4 @@
-# react-field-tag
+# ReactFieldTag
 
 > React library for tag inputs
 
@@ -11,8 +11,6 @@ npm install --save react-field-tag
 ```
 
 ## Usage
-
-![Demo](https://github.com/iamdipanshusingh/React-Field-Tag/blob/dipanshu/docs/docs/demo.gif)
 
 ```tsx
 import React from 'react'
@@ -39,14 +37,14 @@ const App = () => {
 export default App
 ```
 
-## Table of contents
+## Library in action
 
-### Type aliases
+![Demo](https://github.com/iamdipanshusingh/React-Field-Tag/blob/dipanshu/docs/docs/demo.gif)
+
+## Table of contents
 
 - [StyleClasses](#StyleClasses)
 - [ReactFieldTagProps](#ReactFieldTagProps)
-
-## Type aliases
 
 ### StyleClasses
 
