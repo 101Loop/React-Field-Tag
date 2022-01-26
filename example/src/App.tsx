@@ -1,6 +1,8 @@
 import React from 'react'
 
 import ReactFieldTag from 'react-field-tag'
+
+/// add below line to use default styling
 import 'react-field-tag/dist/index.css'
 
 const App = () => {
