@@ -37,9 +37,9 @@ const App = () => {
 export default App
 ```
 
-## Library in action
+## Demo
 
-![Demo](https://github.com/iamdipanshusingh/React-Field-Tag/blob/dipanshu/docs/docs/demo.gif)
+![Demo](https://github.com/iamdipanshusingh/React-Field-Tag/blob/master/docs/demo.gif)
 
 ## Table of contents
 
