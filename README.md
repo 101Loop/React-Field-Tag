@@ -12,6 +12,8 @@ npm install --save react-field-tag
 
 ## Usage
 
+![Demo](https://github.com/iamdipanshusingh/React-Field-Tag/blob/dipanshu/docs/docs/demo.gif)
+
 ```tsx
 import React from 'react'
 
