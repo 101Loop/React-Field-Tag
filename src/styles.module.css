@@ -1,9 +1,36 @@
-/* add css module styles here (optional) */
+.container {
+  display: flex;
+  flex-direction: column;
+}
 
-.test {
-  margin: 2em;
-  padding: 0.5em;
-  border: 2px solid #000;
-  font-size: 2em;
-  text-align: center;
+.container {
+  max-width: 350px;
+}
+
+.tags {
+  display: flex;
+  max-width: 350px;
+  overflow: auto;
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  background-color: #EEEEEE;
+  width: fit-content;
+  padding: 2px 5px;
+  font-size: 12px;
+  margin: 5px;
+  border-radius: 12px;
+}
+
+.tag > button {
+  display: flex;
+  align-items: center
+  ;
+  padding: 0;
+  margin: 0;
+  margin-left: 5px;
+  border: none;
+  cursor: pointer;
 }

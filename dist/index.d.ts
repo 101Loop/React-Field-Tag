@@ -1,6 +1,9 @@
 /// <reference types="react" />
 interface Props {
-    text: string;
+    tags: Array<string>;
+    delimiter?: string;
+    onAdd: (arg: string) => void;
+    onDelete?: (arg: number) => void;
 }
-export declare const ExampleComponent: ({ text }: Props) => JSX.Element;
-export {};
+declare const ReactFieldTag: ({ tags, delimiter, onAdd, onDelete }: Props) => JSX.Element;
+export default ReactFieldTag;

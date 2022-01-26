@@ -1,10 +1,16 @@
 import React from 'react'
 
-import { ExampleComponent } from 'react-field-tag'
+import ReactFieldTag from 'react-field-tag'
 import 'react-field-tag/dist/index.css'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  const [tags, setTags] = React.useState<Array<string>>([]);
+
+  const onAdd = (tag: string) => {
+    setTags([...tags, tag]);
+  }
+
+  return <ReactFieldTag tags={tags} onAdd={onAdd} delimiter=':' />
 }
 
 export default App
