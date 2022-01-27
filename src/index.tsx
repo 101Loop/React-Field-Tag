@@ -36,7 +36,7 @@ const ReactFieldTag = ({ tags, delimiter = ',', onAdd, onDelete, closeIcon, clas
 
   return (
     <div className={classes?.root ?? styles.container}>
-      <input className={styles.input} value={val} onChange={changeHandler} />
+      <input className={classes?.input ?? styles.input} value={val} onChange={changeHandler} />
       <div className={classes?.tags ?? styles.tags}>
         {tags.map((tag, index) => {
           return (
